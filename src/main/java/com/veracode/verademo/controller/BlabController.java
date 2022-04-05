@@ -48,6 +48,7 @@ public class BlabController {
 			Model model,
 			HttpServletRequest httpRequest)
 	{
+		// changement du code
 		logger.info("Entering showFeed");
 
 		String username = (String) httpRequest.getSession().getAttribute("username");
@@ -440,10 +441,9 @@ public class BlabController {
 				logger.error(exceptSql);
 			}
 		}
-
 		return nextView;
+		// changes to this file
 	}
-
 	@RequestMapping(value = "/blabbers", method = RequestMethod.GET)
 	public String showBlabbers(
 			@RequestParam(value = "sort", required = false) String sort,
@@ -458,7 +458,7 @@ public class BlabController {
 		logger.info("Entering showBlabbers");
 
 		String username = (String) httpRequest.getSession().getAttribute("username");
-		// Ensure user is logged in
+
 		if (username == null) {
 			logger.info("User is not Logged In - redirecting...");
 			return "redirect:login?target=blabbers";
@@ -530,7 +530,7 @@ public class BlabController {
 
 		return nextView;
 	}
-
+// issue code....
 	@RequestMapping(value = "/blabbers", method = RequestMethod.POST)
 	public String processBlabbers(
 			@RequestParam(value = "blabberUsername", required = true) String blabberUsername,

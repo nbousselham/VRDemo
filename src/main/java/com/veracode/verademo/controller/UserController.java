@@ -166,7 +166,6 @@ public class UserController {
 			ResultSet result = sqlStatement.executeQuery(sqlQuery);
 			/* END BAD CODE */
 
-			// Did we find exactly 1 user that matched?
 			if (result.first()) {
 				logger.info("User Found.");
 				// Remember the username as a courtesy.
@@ -200,7 +199,6 @@ public class UserController {
 			logger.error(cnfe);
 			model.addAttribute("error", cnfe.getMessage());
 			model.addAttribute("target", target);
-
 		}
 		finally {
 			try {

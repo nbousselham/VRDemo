@@ -137,6 +137,7 @@ public class ResetController {
 					}
 				}
 			}
+			// change smtg
 			connect.commit();
 
 			// Fetch pre-loaded Blabs

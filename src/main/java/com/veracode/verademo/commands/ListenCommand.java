@@ -21,6 +21,7 @@ public class ListenCommand implements BlabberCommand {
 		this.connect = connect;
 		this.username = username;
 	}
+	// ajouter un commentaire - Jira 123
 
 	@Override
 	public void execute(String blabberUsername) {
@@ -33,7 +34,7 @@ public class ListenCommand implements BlabberCommand {
 			action.setString(1, blabberUsername);
 			action.setString(2, username);
 			action.execute();
-
+// add a comment
 			sqlQuery = "SELECT blab_name FROM users WHERE username = '" + blabberUsername + "'";
 			Statement sqlStatement = connect.createStatement();
 			logger.info(sqlQuery);
